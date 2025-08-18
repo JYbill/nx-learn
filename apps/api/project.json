@@ -5,6 +5,14 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "lint": {
+      "cache": true,
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "eslintConfig": "{projectRoot}/eslint.config.mjs",
+        "lintFilePatterns": ["{projectRoot}/src/**/*.ts"]
+      }
+    },
     "build": {
       "executor": "nx:run-commands",
       "options": {

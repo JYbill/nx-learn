@@ -35,8 +35,6 @@ export default [
       '**/*.jsx',
       '**/*.cjs',
       '**/*.mjs',
-    ],
-    // Override or add rules here
-    rules: {},
+    ]
   },
 ];
