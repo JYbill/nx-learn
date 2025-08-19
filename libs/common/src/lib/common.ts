@@ -1,3 +1,5 @@
-export function common(): string {
-  return "common";
+export class CommonCls {
+  test() {
+    return "test func"
+  }
 }
