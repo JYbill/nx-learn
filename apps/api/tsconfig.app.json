@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "target": "esnext",
-    "module": "nodeNext",
+    "module": "ESNext",
     "moduleResolution": "nodeNext",
     "types": ["node"],
     "experimentalDecorators": true,
