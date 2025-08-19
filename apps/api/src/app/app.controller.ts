@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service.js';
-import { common } from "@nx-learn/common";
+import { CommonCls } from "@nx-learn/common";
 import { validate } from "class-validator";
 import { UserValidator } from "../validator/user.validator.js";
 
@@ -11,7 +11,8 @@ export class AppController {
 
   @Get()
   async getData() {
-    console.log(common());
+    await import("@nestjs/core/adapters/index.js");
+    console.log(new CommonCls());
     const obj = new UserValidator();
     obj.name = "xqv";
     obj.email = "baidu.com"

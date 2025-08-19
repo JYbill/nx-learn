@@ -22,9 +22,6 @@ module.exports = {
       generatePackageJson: true,
       sourceMap: true,
       progress: true,
-
-      //test
-      namedChunks: true,
     }),
   ],
 };

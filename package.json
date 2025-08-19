@@ -6,6 +6,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@nx-learn/common": "workspace:*",
     "@nestjs/common": "^11.0.0",
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
@@ -48,5 +49,12 @@
     "typescript": "~5.8.2",
     "typescript-eslint": "^8.29.0",
     "webpack-cli": "^5.1.4"
-  }
+  },
+  "onlyBuiltDependencies": [
+    "@nestjs/core",
+    "@parcel/watcher",
+    "@swc/core",
+    "nx",
+    "unrs-resolver"
+  ]
 }

@@ -2,12 +2,12 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
+    "target": "esnext",
     "module": "nodeNext",
     "moduleResolution": "nodeNext",
     "types": ["node"],
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "target": "esnext"
+    "emitDecoratorMetadata": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"]
