@@ -14,6 +14,7 @@ module.exports = {
       target: 'node',
       compiler: "swc",
       main: './src/main.ts',
+      outputFileName: "main.ts",
       tsConfig: './tsconfig.app.json',
       assets: ['./src/assets'],
       optimization: false,

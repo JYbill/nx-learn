@@ -13,6 +13,13 @@
         "lintFilePatterns": ["{projectRoot}/src/**/*.ts"]
       }
     },
+    "nest-build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd":  "apps/api",
+        "command": "nest build"
+      }
+    },
     "build": {
       "cache": false,
       "executor": "nx:run-commands",
