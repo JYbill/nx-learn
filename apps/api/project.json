@@ -13,9 +13,10 @@
         "lintFilePatterns": ["{projectRoot}/src/**/*.ts"]
       }
     },
-    "nest-build": {
+    "build": {
       "executor": "nx:run-commands",
       "outputs": ["{projectRoot}/dist"],
+      "dependsOn": ["^build"],
       "options": {
         "cwd":  "apps/api",
         "command": "nest build"
@@ -28,7 +29,7 @@
         "buildTarget": "api:nest-build"
       }
     },
-    "build": {
+    "webpack-build": {
       "cache": false,
       "executor": "nx:run-commands",
       "options": {

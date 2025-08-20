@@ -12,6 +12,7 @@
     "emitDecoratorMetadata": true,
     "sourceMap": true,
     "declaration": true,
+    "verbatimModuleSyntax": true,
     "paths": {}
   },
   "include": ["src/**/*.ts"],
