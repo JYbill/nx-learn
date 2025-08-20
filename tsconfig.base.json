@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
+    "baseUrl": ".",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "nodeNext",
@@ -11,12 +12,7 @@
     "target": "esnext",
     "module": "nodeNext",
     "lib": ["esnext", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@nx-learn/common": ["libs/common/src/index.ts"]
-    }
+    "skipLibCheck": true
   },
   "exclude": ["node_modules", "tmp"]
 }
