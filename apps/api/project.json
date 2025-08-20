@@ -73,6 +73,7 @@
       "executor": "nx:noop"
     },
     "test": {
+      "cache": false,
       "options": {
         "passWithNoTests": true
       }

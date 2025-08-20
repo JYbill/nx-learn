@@ -1,9 +1,12 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "rootDir": "src",
+    "baseUrl": ".",
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
-    "moduleResolution": "node10",
+    "moduleResolution": "nodeNext",
+    "target": "esnext",
     "types": ["jest", "node"]
   },
   "include": [
