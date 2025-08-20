@@ -44,13 +44,27 @@
       "plugin": "@nx/jest/plugin",
       "options": {
         "targetName": "test"
-      },
-      "exclude": ["apps/api-e2e/**/*"]
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "exclude": ["e2e/**/*"],
+      "options": {
+        "targetName": "test"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "include": ["e2e/**/*"],
+      "options": {
+        "targetName": "e2e",
+        "ciTargetName": "e2e-ci",
+        "disableJestRuntime": true
+      }
     }
   ],
   "targetDefaults": {
     "@nx/js:tsc": {
-      "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
     },

@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
     "@nestjs/cli": "^11.0.10",
     "@nestjs/common": "^11.0.0",
