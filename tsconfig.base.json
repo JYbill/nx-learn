@@ -12,7 +12,8 @@
     "target": "esnext",
     "module": "nodeNext",
     "lib": ["esnext", "dom"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "customConditions": ["development"]
   },
-  "exclude": ["node_modules", "tmp", "**/dist/**"]
+  "exclude": ["node_modules", "tmp"]
 }
