@@ -14,5 +14,5 @@
     "lib": ["esnext", "dom"],
     "skipLibCheck": true
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp", "**/dist/**"]
 }
