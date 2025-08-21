@@ -1,6 +1,6 @@
 {
   "jsc": {
-    "target": "es2017",
+    "target": "esnext",
     "parser": {
       "syntax": "typescript",
       "decorators": true,
@@ -12,11 +12,12 @@
     },
     "keepClassNames": true,
     "externalHelpers": true,
-    "loose": true
+    "loose": false
   },
   "module": {
     "type": "es6"
   },
   "sourceMaps": true,
+  "minify": false,
   "exclude": []
 }

@@ -6,6 +6,12 @@
     "deleteOutDir": true,
     "assets": ["assets/*"],
     "watchAssets": true,
-    "tsConfigPath": "tsconfig.app.json"
+    "typeCheck": true,
+    "builder": {
+      "type": "swc",
+      "options": {
+        "swcrcPath": "./.swcrc"
+      }
+    }
   }
 }
