@@ -2,7 +2,10 @@
   "name": "@nx-learn/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:api": "nx build api --outputStyle stream --skipSync",
+    "build:all": "nx run-many -t build --skipSync"
+  },
   "private": true,
   "type": "commonjs",
   "dependencies": {
