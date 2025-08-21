@@ -71,12 +71,6 @@
     "prune": {
       "dependsOn": ["prune-lockfile", "copy-workspace-modules"],
       "executor": "nx:noop"
-    },
-    "test": {
-      "cache": false,
-      "options": {
-        "passWithNoTests": true
-      }
     }
   }
 }

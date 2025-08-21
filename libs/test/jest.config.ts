@@ -10,7 +10,7 @@ const swcJestConfig = JSON.parse(
 swcJestConfig.swcrc = false;
 
 export default {
-  displayName: '@test/common',
+  displayName: '@nx-learn/common',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {

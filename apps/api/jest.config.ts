@@ -1,32 +1,20 @@
+import { readFileSync } from 'fs';
+
+// Reading the SWC compilation config for the spec files
+const swcJestConfig = JSON.parse(
+  readFileSync(`${__dirname}/.spec.swcrc`, 'utf-8')
+);
+
+// Disable .swcrc look-up by SWC core because we're passing in swcJestConfig ourselves
+swcJestConfig.swcrc = false;
+
 export default {
-  displayName: 'api',
+  displayName: '@nx-learn/api',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
-    '^.+\\.ts$': ['ts-jest', { tsconfig: './tsconfig.spec.json' }],
+    '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/api',
-  testMatch: [
-    "./**/*.spec.ts",
-  ],
-  transformIgnorePatterns: [
-    '/node_modules/',
-    '\\.pnp\\.[^\\/]+$',
-    // 忽略所有 dist 目录
-    '.*/dist/.*',
-    // 或者更具体地忽略 workspace 包的 dist 目录
-    'libs/.*/dist/.*',
-    'apps/.*/dist/.*'
-  ],
-  modulePathIgnorePatterns: [
-    '<rootDir>/libs/.*/dist',
-    '<rootDir>/apps/.*/dist',
-    // 或者更通用的模式
-    '.*/dist/.*'
-  ],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '.*/dist/.*'
-  ]
+  coverageDirectory: 'api-output/jest/coverage',
 };
