@@ -12,6 +12,15 @@
         "eslintConfig": "{projectRoot}/eslint.config.mjs",
         "lintFilePatterns": ["{projectRoot}/src/**/*.ts"]
       }
+    },
+    "build": {
+      "cache": true,
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "libs/common",
+        "command": "tsc --build tsconfig.lib.json"
+      },
+      "parallelism": true
     }
   }
 }

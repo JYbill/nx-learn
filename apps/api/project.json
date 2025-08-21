@@ -11,7 +11,8 @@
       "options": {
         "eslintConfig": "{projectRoot}/eslint.config.mjs",
         "lintFilePatterns": ["{projectRoot}/src/**/*.ts"]
-      }
+      },
+      "parallelism": true
     },
     "build": {
       "cache": true,
@@ -21,30 +22,14 @@
       "options": {
         "cwd":  "apps/api",
         "command": "nest build"
-      }
+      },
+      "parallelism": true
     },
     "serve": {
       "continuous": true,
       "executor": "@nx/js:node",
       "options": {
         "buildTarget": "api:nest-build"
-      }
-    },
-    "webpack-build": {
-      "cache": true,
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "webpack-cli build",
-        "args": ["--node-env=production"],
-        "cwd": "apps/api"
-      },
-      "configurations": {
-        "production": {
-          "args": ["--node-env=production"]
-        },
-        "development": {
-          "args": ["--node-env=development"]
-        }
       }
     },
     "prune-lockfile": {
