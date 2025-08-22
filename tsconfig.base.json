@@ -1,8 +1,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": ".",
-    "baseUrl": ".",
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "nodeNext",
