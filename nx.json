@@ -82,5 +82,8 @@
     "build": {
       "dependsOn": ["^build"]
     }
+  },
+  "release": {
+    "projects": ["libs/*"]
   }
 }

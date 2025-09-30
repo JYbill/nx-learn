@@ -29,7 +29,7 @@
       "continuous": true,
       "executor": "@nx/js:node",
       "options": {
-        "buildTarget": "api:nest-build"
+        "buildTarget": "api:build"
       }
     },
     "prune-lockfile": {
