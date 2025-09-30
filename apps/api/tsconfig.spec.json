@@ -4,9 +4,9 @@
     "rootDir": "src",
     "baseUrl": ".",
     "outDir": "../../dist/out-tsc",
-    "module": "commonjs",
-    "moduleResolution": "nodenext",
-    "target": "esnext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNEXT",
     "types": ["jest", "node"]
   },
   "include": [
