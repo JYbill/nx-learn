@@ -5,7 +5,7 @@ const swcJestConfig = JSON.parse(readFileSync(`${__dirname}/.swcrc`, "utf-8"));
 
 // Disable .swcrc look-up by SWC core because we're passing in swcJestConfig ourselves
 swcJestConfig.swcrc = false;
-
+console.log(2);
 export default {
   displayName: "@nx-learn/api",
   preset: "../../jest.preset.js",

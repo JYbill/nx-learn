@@ -11,7 +11,7 @@
     "module": "nodeNext",
     "lib": ["esnext", "dom"],
     "skipLibCheck": true,
-    "customConditions": ["development"]
+    "customConditions": ["@nx-learn/source"]
   },
   "exclude": ["node_modules", "tmp"]
 }
