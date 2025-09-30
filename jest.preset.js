@@ -1,6 +1,6 @@
-const nxPreset = require('@nx/jest/preset').default;
+import nxPreset from "@nx/jest/preset.js";
 
-module.exports = {
-  ...nxPreset,
+export default {
+  ...nxPreset.default,
   transform: {}
 };
