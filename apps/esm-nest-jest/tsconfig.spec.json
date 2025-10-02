@@ -1,12 +1,9 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "rootDir": "src",
-    "baseUrl": ".",
-    "outDir": "../../dist/out-tsc",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "target": "ESNEXT",
+    "target": "EsNext",
     "types": ["jest", "node"]
   },
   "include": [

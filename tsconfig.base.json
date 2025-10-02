@@ -1,11 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "sourceMap": true,
-    "declaration": false,
     "moduleResolution": "nodeNext",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "importHelpers": true,
     "target": "esnext",
     "module": "nodeNext",

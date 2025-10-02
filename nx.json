@@ -3,6 +3,7 @@
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "test": [
+      "default",
       "!{projectRoot}/eslint.config.mjs"
     ],
     "production": [
@@ -88,7 +89,6 @@
     "test": {
       "inputs": [
         "test",
-        "default"
       ]
     }
   },
