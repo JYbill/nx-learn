@@ -8,6 +8,7 @@ export default {
   transform: {
     "^.+\\.ts$": ["ts-jest", {
       useEsm: true,
+      tsconfig: "<rootDir>/tsconfig.spec.json",
     }],
   },
   moduleFileExtensions: ["ts", "js"],
