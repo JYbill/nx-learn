@@ -10,7 +10,6 @@
 
     // for swc
     "isolatedModules": true,
-    "importsNotUsedAsValues": "error",
     "verbatimModuleSyntax": true,
     "useDefineForClassFields": true
   },
