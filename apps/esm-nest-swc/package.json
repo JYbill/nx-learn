@@ -1,5 +1,5 @@
 {
-  "name": "@nx-learn/api",
+  "name": "@nx-learn/esm-nest-swc",
   "version": "0.0.1",
   "private": true,
   "type": "module"

@@ -2,6 +2,9 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "test": [
+      "!{projectRoot}/eslint.config.mjs"
+    ],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -81,6 +84,12 @@
     },
     "build": {
       "dependsOn": ["^build"]
+    },
+    "test": {
+      "inputs": [
+        "test",
+        "default"
+      ]
     }
   },
   "release": {

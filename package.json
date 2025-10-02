@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "build:api": "nx build api --outputStyle stream --skipSync",
-    "test:api": "nx run test:api",
-    "test:esm-nest-jest": " NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" nx run esm-nest-jest:test --verbose",
+    "test:esm-nest-swc": "nx run esm-nest-swc:test --verbose",
+    "test:esm-nest-jest": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" nx run esm-nest-jest:test --verbose",
     "build:all": "nx run-many -t build --skipSync"
   },
   "private": true,

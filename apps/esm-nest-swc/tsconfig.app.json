@@ -21,8 +21,7 @@
     "useDefineForClassFields": true
   },
   "include": ["src/**/*.ts"],
-  "exclude": [
-    "jest.config", "src/**/*.spec.ts", "src/**/*.test.ts"],
+  "exclude": ["jest.config.cts", "src/**/*.spec.ts", "src/**/*.test.ts"],
   "references": [
     {
       "path": "../../libs/common/tsconfig.lib.json"

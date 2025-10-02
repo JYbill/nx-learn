@@ -1,7 +1,7 @@
 import type { Config } from 'jest';
 
 export default {
-  displayName: "@nx-learn/api",
+  displayName: "@nx-learn/esm-nest-jest",
   preset: "../../jest.preset.js",
   testEnvironment: "node",
   testMatch: ["**/*spec.?([mc])ts"],

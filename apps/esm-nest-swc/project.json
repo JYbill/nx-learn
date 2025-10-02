@@ -60,7 +60,7 @@
     "test": {
       "executor": "@nx/jest:jest",
       "options": {
-        "jestConfig": "{projectRoot}/jest.config.ts",
+        "jestConfig": "{projectRoot}/jest.config.cts",
         "passWithNoTests": true
       }
     }
