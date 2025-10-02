@@ -1,7 +1,7 @@
 {
-  "name": "api",
+  "name": "esm-nest-swc",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/api/src",
+  "sourceRoot": "apps/esm-nest-swc/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -20,7 +20,7 @@
       "outputs": ["{projectRoot}/dist"],
       "dependsOn": ["^build"],
       "options": {
-        "cwd":  "apps/api",
+        "cwd":  "apps/esm-nest-swc",
         "command": "nest build"
       },
       "parallelism": true
@@ -29,7 +29,7 @@
       "continuous": true,
       "executor": "@nx/js:node",
       "options": {
-        "buildTarget": "api:build"
+        "buildTarget": "esm-nest-swc:build"
       }
     },
     "prune-lockfile": {
@@ -37,8 +37,8 @@
       "cache": true,
       "executor": "@nx/js:prune-lockfile",
       "outputs": [
-        "{workspaceRoot}/dist/apps/api/package.json",
-        "{workspaceRoot}/dist/apps/api/pnpm-lock.yaml"
+        "{workspaceRoot}/dist/apps/esm-nest-swc/package.json",
+        "{workspaceRoot}/dist/apps/esm-nest-swc/pnpm-lock.yaml"
       ],
       "options": {
         "buildTarget": "build"
@@ -47,7 +47,7 @@
     "copy-workspace-modules": {
       "dependsOn": ["build"],
       "cache": true,
-      "outputs": ["{workspaceRoot}/dist/apps/api/workspace_modules"],
+      "outputs": ["{workspaceRoot}/dist/apps/esm-nest-swc/workspace_modules"],
       "executor": "@nx/js:copy-workspace-modules",
       "options": {
         "buildTarget": "build"
@@ -56,6 +56,13 @@
     "prune": {
       "dependsOn": ["prune-lockfile", "copy-workspace-modules"],
       "executor": "nx:noop"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "{projectRoot}/jest.config.ts",
+        "passWithNoTests": true
+      }
     }
   }
 }

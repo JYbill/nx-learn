@@ -11,7 +11,6 @@ export class AppController {
 
   @Get()
   async getData() {
-    await import("@nestjs/core/adapters/index.js");
     console.log(new CommonCls());
     const obj = new UserValidator();
     obj.name = "xqv";
