@@ -2,10 +2,7 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "test": [
-      "default",
-      "!{projectRoot}/eslint.config.mjs"
-    ],
+    "test": ["default", "!{projectRoot}/eslint.config.mjs"],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -17,14 +14,6 @@
       "!{projectRoot}/test-setup.[jt]s"
     ],
     "sharedGlobals": []
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
-    }
   },
   "plugins": [
     {
@@ -39,17 +28,6 @@
           "buildDepsName": "build-deps",
           "watchDepsName": "watch-deps"
         }
-      }
-    },
-    {
-      "plugin": "@nx/webpack/plugin",
-      "options": {
-        "buildTargetName": "build",
-        "serveTargetName": "serve",
-        "previewTargetName": "preview",
-        "buildDepsTargetName": "build-deps",
-        "watchDepsTargetName": "watch-deps",
-        "serveStaticTargetName": "serve-static"
       }
     },
     {
@@ -81,15 +59,19 @@
       "inputs": ["production", "^production"]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": ["^lint"],
+      "cache": true
     },
     "build": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build"],
+      "cache": true
     },
     "test": {
-      "inputs": [
-        "test",
-      ]
+      "inputs": ["test"],
+      "cache": true
+    },
+    "e2e": {
+      "cache": true
     }
   },
   "release": {

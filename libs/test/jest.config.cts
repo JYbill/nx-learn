@@ -10,7 +10,7 @@ swcJestConfig.swcrc = false;
 
 export default {
   displayName: '@nx-learn/common',
-  preset: '../../jest.preset.js',
+  preset: '../../jest.preset.ts',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],
