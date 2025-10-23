@@ -18,6 +18,7 @@
       "cache": true,
       "executor": "nx:run-commands",
       "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/dist"],
       "options": {
         "cwd":  "apps/esm-nest-jest",
         "command": "nest build"
