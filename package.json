@@ -5,7 +5,9 @@
   "scripts": {
     "test:esm-nest-swc": "nx run esm-nest-swc:test --verbose",
     "test:esm-nest-jest": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" nx run esm-nest-jest:test --verbose",
-    "build:all": "nx run-many -t build --skipSync"
+    "build:all": "nx run-many -t build --skipSync",
+    "serve:esm-nest-jest": "nx run esm-nest-jest:serve --skip-nx-cache",
+    "serve:esm-nest-swc": "nx run esm-nest-jest:serve --skip-nx-cache"
   },
   "private": true,
   "type": "module",
