@@ -4,7 +4,16 @@
   "files": [],
   "references": [
     {
+      "path": "./apps/esm-nest-jest"
+    },
+    {
+      "path": "./apps/esm-nest-swc"
+    },
+    {
       "path": "./libs/test"
+    },
+    {
+      "path": "./libs/common"
     }
   ]
 }

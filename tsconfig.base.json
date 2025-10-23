@@ -1,6 +1,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "composite": true,
+    "declaration": true,
     "moduleResolution": "nodeNext",
     "importHelpers": true,
     "target": "esnext",
