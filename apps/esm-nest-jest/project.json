@@ -16,12 +16,15 @@
     },
     "build": {
       "cache": true,
-      "executor": "nx:run-commands",
+      "executor": "@nx/js:tsc",
       "dependsOn": ["^build"],
-      "outputs": ["{projectRoot}/dist"],
       "options": {
-        "cwd":  "apps/esm-nest-jest",
-        "command": "nest build"
+        "main": "{projectRoot}/src/main.ts",
+        "tsConfig": "{projectRoot}/tsconfig.app.json",
+        "clean": false,
+        "rootDir": "{projectRoot}/src",
+        "outputPath": "{projectRoot}/dist",
+        "generatePackageJson": false
       },
       "parallelism": true
     },
@@ -29,7 +32,10 @@
       "continuous": true,
       "executor": "@nx/js:node",
       "options": {
-        "buildTarget": "esm-nest-jest:build"
+        "buildTarget": "build",
+        "buildTargetOptions": {
+          "main": "{projectRoot}/main.ts"
+        }
       }
     },
     "test": {
