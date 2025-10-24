@@ -5,10 +5,6 @@
     "tsBuildInfoFile": "tsconfig.app.tsbuildinfo",
     "outDir": "dist",
     "types": ["node"],
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "sourceMap": true,
-    "declaration": true,
     "paths": {},
 
     // for swc

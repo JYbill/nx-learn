@@ -3,9 +3,17 @@
   "compilerOptions": {
     "incremental": true,
     "composite": true,
-    "tsBuildInfoFile": "tsconfig.lib.tsbuildinfo",
-    "emitDeclarationOnly": false,
     "forceConsistentCasingInFileNames": true,
-    "declaration": true
-  }
+    "declaration": true,
+    "declarationMap": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
 }

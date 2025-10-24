@@ -6,11 +6,16 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "importHelpers": true,
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": true,
+    "composite": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noPropertyAccessFromIndexSignature": true
   },
+  "files": [],
   "references": [
     {
       "path": "../test/tsconfig.json"
