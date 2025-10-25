@@ -19,7 +19,7 @@
       "executor": "@nx/js:tsc",
       "dependsOn": ["^build"],
       "options": {
-        "main": "{projectRoot}/src/main.ts",
+        "main": "{projectRoot}/main.ts",
         "tsConfig": "{projectRoot}/tsconfig.app.json",
         "clean": false,
         "rootDir": "{projectRoot}/src",
@@ -32,10 +32,7 @@
       "continuous": true,
       "executor": "@nx/js:node",
       "options": {
-        "buildTarget": "build",
-        "buildTargetOptions": {
-          "main": "{projectRoot}/main.ts"
-        }
+        "buildTarget": "build"
       }
     },
     "test": {
