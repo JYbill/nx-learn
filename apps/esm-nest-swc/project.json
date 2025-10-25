@@ -18,14 +18,12 @@
       "dependsOn": ["^build", "typecheck"],
       "options": {
         "cwd":  "apps/esm-nest-swc",
-        "command": "nest build --watch"
+        "command": "nest build"
       }
     },
     "serve": {
-      "cache": false,
       "executor": "@nx/js:node",
       "options": {
-        "watch": true,
         "buildTarget": "build"
       }
     },
