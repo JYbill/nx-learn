@@ -19,7 +19,9 @@
     {
       "plugin": "@nx/js/typescript",
       "options": {
-        "typecheck": { "targetName": "typecheck" },
+        "typecheck": {
+          "targetName": "typecheck"
+        },
         "build": {
           "targetName": "build",
           "configName": "tsconfig.lib.json",
@@ -28,24 +30,59 @@
         }
       }
     },
-    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
-    { "plugin": "@nx/jest/plugin", "exclude": ["e2e/**/*"], "options": { "targetName": "test" } },
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "plugin": "@nx/jest/plugin",
+      "exclude": ["e2e/**/*"],
+      "options": {
+        "targetName": "test"
+      }
+    },
     {
       "plugin": "@nx/jest/plugin",
       "include": ["e2e/**/*"],
-      "options": { "targetName": "e2e", "ciTargetName": "e2e-ci", "disableJestRuntime": true }
+      "options": {
+        "targetName": "e2e",
+        "ciTargetName": "e2e-ci",
+        "disableJestRuntime": true
+      }
     }
   ],
   "targetDefaults": {
-    "@nx/js:tsc": { "dependsOn": ["^build"], "inputs": ["production", "^production"] },
-    "lint": { "dependsOn": ["^lint"], "cache": true },
-    "build": { "dependsOn": ["^build"], "cache": true },
-    "test": { "inputs": ["test"], "cache": true },
-    "e2e": { "cache": true },
-    "serve": { "cache": false }
+    "@nx/js:tsc": {
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"],
+      "cache": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true
+    },
+    "test": {
+      "inputs": ["test"],
+      "cache": true
+    },
+    "e2e": {
+      "cache": true
+    },
+    "serve": {
+      "cache": false
+    }
   },
-  "release": { "projects": ["libs/*"] },
+  "release": {
+    "projects": ["libs/*"]
+  },
   "nxCloudId": "68f8e304bbbbc903aa8761a6",
   "nxCloudEncryptionKey": "fZaxhjNeRyGj0hCCNqMTytc2BeWBtlKD",
-  "tui": { "enabled": false }
+  "tui": {
+    "enabled": false
+  }
 }
