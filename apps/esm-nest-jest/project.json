@@ -1,7 +1,7 @@
 {
   "name": "esm-nest-jest",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/esm-nest-jest/esm-nest-jest",
+  "sourceRoot": "apps/esm-nest-jest/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -15,7 +15,6 @@
     },
     "build": {
       "executor": "@nx/js:tsc",
-      "dependsOn": ["^build"],
       "options": {
         "main": "{projectRoot}/main.ts",
         "tsConfig": "{projectRoot}/tsconfig.app.json",
@@ -25,6 +24,7 @@
         "generatePackageJson": false
       },
       "parallelism": true
+
     },
     "serve": {
       "continuous": true,
