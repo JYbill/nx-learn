@@ -2,11 +2,19 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "test": ["default", "!{projectRoot}/eslint.config.mjs"],
-    "production": [
-      "default",
+    "ignore": [
       "!{projectRoot}/.eslintrc.json",
       "!{projectRoot}/eslint.config.mjs",
+      "!{projectRoot}/**/.gitkeep",
+      "!{projectRoot}/README.md"
+    ],
+    "test": [
+      "default",
+      "ignore"
+    ],
+    "production": [
+      "default",
+      "ignore",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/jest.config.[jt]s",
@@ -56,21 +64,24 @@
   "targetDefaults": {
     "@nx/js:tsc": {
       "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
+      "inputs": ["production"]
     },
     "lint": {
       "dependsOn": ["^lint"],
+      "inputs": ["production"],
       "cache": true
     },
     "build": {
       "dependsOn": ["^build"],
+      "inputs": ["production"],
       "cache": true
     },
     "test": {
-      "inputs": ["test"],
+      "inputs": ["test", "^test"],
       "cache": true
     },
     "e2e": {
+      "inputs": ["test", "^test"],
       "cache": true
     },
     "serve": {
