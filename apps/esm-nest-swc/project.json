@@ -5,19 +5,12 @@
   "projectType": "application",
   "tags": [],
   "targets": {
-    "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "eslintConfig": "{projectRoot}/eslint.config.mjs",
-        "lintFilePatterns": ["{projectRoot}/src/**/*.ts"]
-      }
-    },
     "build": {
       "executor": "nx:run-commands",
       "outputs": ["{projectRoot}/dist"],
       "dependsOn": ["^build", "typecheck"],
       "options": {
-        "cwd":  "apps/esm-nest-swc",
+        "cwd": "apps/esm-nest-swc",
         "command": "nest build"
       }
     },
@@ -25,13 +18,6 @@
       "executor": "@nx/js:node",
       "options": {
         "buildTarget": "build"
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "{projectRoot}/jest.config.cts",
-        "passWithNoTests": true
       }
     }
   }

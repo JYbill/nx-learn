@@ -5,14 +5,6 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "lint": {
-      "cache": true,
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "eslintConfig": "{projectRoot}/eslint.config.mjs",
-        "lintFilePatterns": ["{projectRoot}/src/**/*.ts"]
-      }
-    },
     "build": {
       "cache": true,
       "executor": "nx:run-commands",

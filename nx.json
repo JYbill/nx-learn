@@ -66,8 +66,13 @@
       "inputs": ["production"]
     },
     "lint": {
+      "inputs": [
+        "default",
+        "{workspaceRoot}/eslint.config.mjs",
+        "{projectRoot}/eslint.config.mjs",
+        {"externalDependencies":["eslint"]}
+      ],
       "dependsOn": ["^lint"],
-      "inputs": ["production"],
       "cache": true
     },
     "build": {

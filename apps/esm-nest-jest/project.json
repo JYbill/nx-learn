@@ -5,14 +5,6 @@
   "projectType": "application",
   "tags": [],
   "targets": {
-    "lint": {
-      "executor": "@nx/eslint:lint",
-      "options": {
-        "eslintConfig": "{projectRoot}/eslint.config.mjs",
-        "lintFilePatterns": ["{projectRoot}/src/**/*.ts"]
-      },
-      "parallelism": true
-    },
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}", "{projectRoot}/tsconfig.app.tsbuildinfo"],
@@ -25,20 +17,12 @@
         "generatePackageJson": false
       },
       "parallelism": true
-
     },
     "serve": {
       "continuous": true,
       "executor": "@nx/js:node",
       "options": {
         "buildTarget": "build"
-      }
-    },
-    "test": {
-      "executor": "@nx/jest:jest",
-      "options": {
-        "jestConfig": "{projectRoot}/jest.config.ts",
-        "passWithNoTests": true
       }
     }
   }
