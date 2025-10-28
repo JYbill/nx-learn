@@ -5,6 +5,13 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "test": {
+      "options": {
+        "env": {
+          "NODE_OPTIONS": "--no-experimental-strip-types --experimental-vm-modules"
+        }
+      }
+    },
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}", "{projectRoot}/tsconfig.app.tsbuildinfo"],
