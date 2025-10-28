@@ -8,10 +8,7 @@
       "!{projectRoot}/**/.gitkeep",
       "!{projectRoot}/README.md"
     ],
-    "test": [
-      "default",
-      "ignore"
-    ],
+    "test": ["default", "ignore"],
     "production": [
       "default",
       "ignore",
@@ -21,10 +18,9 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": [
-      "{projectRoot}/*.tsbuildinfo"
-    ]
+    "sharedGlobals": ["{projectRoot}/*.tsbuildinfo"]
   },
+  "useInferencePlugins": false,
   "plugins": [
     {
       "plugin": "@nx/js/typescript",

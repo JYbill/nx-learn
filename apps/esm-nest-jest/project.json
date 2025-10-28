@@ -15,6 +15,7 @@
     },
     "build": {
       "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}", "{projectRoot}/tsconfig.app.tsbuildinfo"],
       "options": {
         "main": "{projectRoot}/main.ts",
         "tsConfig": "{projectRoot}/tsconfig.app.json",
