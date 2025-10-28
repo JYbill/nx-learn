@@ -66,23 +66,33 @@
       "inputs": ["production"]
     },
     "lint": {
+      "cache": true,
+      "dependsOn": ["^lint"],
       "inputs": [
         "default",
         "{workspaceRoot}/eslint.config.mjs",
         "{projectRoot}/eslint.config.mjs",
-        {"externalDependencies":["eslint"]}
-      ],
-      "dependsOn": ["^lint"],
-      "cache": true
+        {
+          "externalDependencies": ["eslint"]
+        }
+      ]
     },
     "build": {
+      "cache": true,
       "dependsOn": ["^build"],
-      "inputs": ["production"],
-      "cache": true
+      "inputs": ["production"]
     },
     "test": {
-      "inputs": ["test", "^test"],
-      "cache": true
+      "cache": true,
+      "dependsOn": ["^test"],
+      "inputs": [
+        "test",
+        "^production",
+        "{workspaceRoot}/jest.preset.ts",
+        {
+          "externalDependencies":["jest"]
+        }
+      ]
     },
     "e2e": {
       "inputs": ["test", "^test"],

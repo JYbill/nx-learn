@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "test:esm-nest-swc": "nx run esm-nest-swc:test --verbose",
-    "test:esm-nest-jest": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" nx run esm-nest-jest:test --verbose",
-    "build:all": "nx run-many -t build --skipSync",
-    "serve:esm-nest-jest": "nx run esm-nest-jest:serve --skip-nx-cache",
-    "serve:esm-nest-swc": "nx run esm-nest-jest:serve --skip-nx-cache"
+    "build:esm-nest-jest": "nx run esm-nest-jest:build --batch",
+    "test:esm-nest-swc": "nx run esm-nest-swc:test",
+    "test:esm-nest-jest": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" nx run esm-nest-jest:test",
+    "build:all": "nx run-many -t build",
+    "serve:esm-nest-jest": "nx run esm-nest-jest:serve",
+    "serve:esm-nest-swc": "nx run esm-nest-jest:serve"
   },
   "private": true,
   "type": "module",
