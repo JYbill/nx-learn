@@ -90,7 +90,7 @@
         "^production",
         "{workspaceRoot}/jest.preset.ts",
         {
-          "externalDependencies":["jest"]
+          "externalDependencies": ["jest"]
         }
       ]
     },
