@@ -12,24 +12,14 @@
         }
       }
     },
-    "build": {
-      "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}", "{projectRoot}/tsconfig.app.tsbuildinfo"],
-      "options": {
-        "main": "{projectRoot}/main.ts",
-        "tsConfig": "{projectRoot}/tsconfig.app.json",
-        "clean": false,
-        "rootDir": "{projectRoot}/src",
-        "outputPath": "{projectRoot}/dist",
-        "generatePackageJson": false
-      },
-      "parallelism": true
-    },
     "serve": {
-      "continuous": true,
-      "executor": "@nx/js:node",
+      "executor": "nx:run-commands",
       "options": {
-        "buildTarget": "build"
+        "cwd": "apps/esm-nest-jest",
+        "commands": [
+          "nx run esm-nest-jest:build --batch --watch",
+          "node --watch dist/main.js"
+        ]
       }
     }
   }
