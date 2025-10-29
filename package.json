@@ -5,7 +5,8 @@
   "scripts": {
     "build:esm-nest-jest": "nx run esm-nest-jest:build --batch",
     "serve:esm-nest-jest": "nx run esm-nest-jest:serve",
-    "serve:esm-nest-swc": "nx run esm-nest-jest:serve"
+    "serve:esm-nest-swc": "nx run esm-nest-jest:serve",
+    "check-nx-task": "nx run-many -t typecheck build lint test"
   },
   "private": true,
   "type": "module",

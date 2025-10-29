@@ -56,6 +56,11 @@
       }
     }
   ],
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": true
+    }
+  },
   "targetDefaults": {
     "lint": {
       "cache": true,
@@ -69,8 +74,7 @@
       ]
     },
     "build": {
-      "cache": true,
-      "inputs": ["production"]
+      "cache": true
     },
     "test": {
       "cache": true,
@@ -85,7 +89,6 @@
       ]
     },
     "e2e": {
-      "inputs": ["test", "^test"],
       "cache": true
     },
     "serve": {

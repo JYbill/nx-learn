@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": "src",
-    "tsBuildInfoFile": "tsconfig.app.tsbuildinfo",
+    "tsBuildInfoFile": "tsconfig.lib.tsbuildinfo",
     "outDir": "dist",
     "types": ["node"],
     "paths": {},

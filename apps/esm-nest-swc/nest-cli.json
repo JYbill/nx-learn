@@ -7,7 +7,6 @@
     "assets": ["assets/*"],
     "watchAssets": true,
     "typeCheck": false,
-    "tsConfigPath": "tsconfig.app.json",
     "builder": {
       "type": "swc",
       "options": {
