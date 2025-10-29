@@ -59,7 +59,6 @@
   "targetDefaults": {
     "lint": {
       "cache": true,
-      "dependsOn": ["^lint"],
       "inputs": [
         "default",
         "{workspaceRoot}/eslint.config.mjs",
