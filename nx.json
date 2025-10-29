@@ -56,11 +56,6 @@
       }
     }
   ],
-  "pluginsConfig": {
-    "@nx/js": {
-      "analyzeSourceFiles": true
-    }
-  },
   "targetDefaults": {
     "lint": {
       "cache": true,
