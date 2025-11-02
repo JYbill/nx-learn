@@ -87,6 +87,7 @@
       "cache": true
     },
     "serve": {
+      "continuous": true,
       "cache": false
     }
   },
