@@ -1,12 +1,10 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "rootDir": "src",
     "tsBuildInfoFile": "tsconfig.lib.tsbuildinfo",
     "outDir": "dist",
     "types": ["node"],
-    "paths": {},
 
     // for swc
     "isolatedModules": true,
