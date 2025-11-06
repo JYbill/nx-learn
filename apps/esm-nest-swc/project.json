@@ -7,11 +7,12 @@
   "targets": {
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{projectRoot}/dist"],
-      "dependsOn": ["^build"],
       "options": {
         "cwd": "apps/esm-nest-swc",
-        "command": "nest build"
+        "commands": [
+          "nest build",
+          "nx run esm-nest-swc:typecheck --batch"
+        ]
       }
     },
     "serve": {
@@ -20,7 +21,6 @@
         "cwd": "apps/esm-nest-swc",
         "commands": [
           "nx run esm-nest-swc:build --watch",
-          "nx run esm-nest-swc:typecheck --batch --watch",
           "node --watch dist/main.js"
         ]
       }
