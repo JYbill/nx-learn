@@ -94,7 +94,7 @@
   "release": {
     "projects": ["libs/*"],
     "changelog": {
-      "workspaceChangelog": {
+      "projectChangelogs": {
         "createRelease": "github"
       }
     }

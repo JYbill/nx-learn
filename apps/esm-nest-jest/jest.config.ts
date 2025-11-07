@@ -1,4 +1,4 @@
-import type { Config } from 'jest';
+import type { Config } from "jest";
 
 export default {
   displayName: "@nx-learn/esm-nest-jest",
@@ -6,10 +6,13 @@ export default {
   testEnvironment: "node",
   testMatch: ["**/*spec.?([mc])ts"],
   transform: {
-    "^.+\\.ts$": ["ts-jest", {
-      useEsm: true,
-      tsconfig: "<rootDir>/tsconfig.spec.json",
-    }],
+    "^.+\\.ts$": [
+      "ts-jest",
+      {
+        useEsm: true,
+        tsconfig: "<rootDir>/tsconfig.spec.json",
+      },
+    ],
   },
   moduleFileExtensions: ["ts", "js"],
   extensionsToTreatAsEsm: [".ts"],

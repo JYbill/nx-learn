@@ -4,11 +4,8 @@
     "rootDir": "src",
     "outDir": "dist",
     "tsBuildInfoFile": "tsconfig.spec.tsbuildinfo",
-    "types": ["jest", "node"],
+    "types": ["jest", "node"]
   },
-  "include": [
-    "src/**/*.test.ts",
-    "src/**/*.spec.ts"
-  ],
+  "include": ["src/**/*.test.ts", "src/**/*.spec.ts"],
   "references": [{ "path": "./tsconfig.lib.json" }]
 }

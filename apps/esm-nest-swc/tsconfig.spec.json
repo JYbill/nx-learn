@@ -5,10 +5,7 @@
     "outDir": "dist",
     "types": ["jest", "node"]
   },
-  "include": [
-    "src/**/*.test.ts",
-    "src/**/*.spec.ts"
-  ],
+  "include": ["src/**/*.test.ts", "src/**/*.spec.ts"],
   "references": [
     {
       "path": "./tsconfig.app.json"

@@ -16,10 +16,7 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/esm-nest-jest",
-        "commands": [
-          "nx run esm-nest-jest:build --batch --watch",
-          "node --watch dist/main.js"
-        ]
+        "commands": ["nx run esm-nest-jest:build --batch --watch", "node --watch dist/main.js"]
       }
     }
   }

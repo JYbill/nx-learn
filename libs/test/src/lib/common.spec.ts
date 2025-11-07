@@ -1,7 +1,7 @@
-import { common } from './common.js';
+import { common } from "./common.js";
 
-describe('common', () => {
-  it('should work', () => {
-    expect(common()).toEqual('common');
+describe("common", () => {
+  it("should work", () => {
+    expect(common()).toEqual("common");
   });
 });

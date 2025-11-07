@@ -9,20 +9,14 @@
       "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/esm-nest-swc",
-        "commands": [
-          "nest build",
-          "nx run esm-nest-swc:typecheck --batch"
-        ]
+        "commands": ["nest build", "nx run esm-nest-swc:typecheck --batch"]
       }
     },
     "serve": {
       "executor": "nx:run-commands",
       "options": {
         "cwd": "apps/esm-nest-swc",
-        "commands": [
-          "nx run esm-nest-swc:build --watch",
-          "node --watch dist/main.js"
-        ]
+        "commands": ["nx run esm-nest-swc:build --watch", "node --watch dist/main.js"]
       }
     }
   }
