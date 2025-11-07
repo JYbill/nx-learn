@@ -1,5 +1,5 @@
 {
-  "name": "common",
+  "name": "@nx-learn/common",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/common/src",
   "projectType": "library",

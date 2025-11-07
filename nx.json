@@ -92,7 +92,12 @@
     }
   },
   "release": {
-    "projects": ["libs/*"]
+    "projects": ["libs/*"],
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github"
+      }
+    }
   },
   "nxCloudId": "68f8e304bbbbc903aa8761a6",
   "nxCloudEncryptionKey": "fZaxhjNeRyGj0hCCNqMTytc2BeWBtlKD",
