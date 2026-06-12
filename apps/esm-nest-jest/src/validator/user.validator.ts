@@ -4,25 +4,25 @@ import { Type } from "class-transformer";
 class Post {
   @IsString()
   @MaxLength(10)
-  title: string;
+  title!: string;
 
   @IsString()
   @MaxLength(100)
-  content: string;
+  content!: string;
 }
 
 export class UserValidator {
   @IsString()
-  name: string;
+  name!: string;
 
   @IsNumber()
-  age: number;
+  age!: number;
 
   @IsString()
   @IsEmail()
-  email: string;
+  email!: string;
 
   @ValidateNested()
   @Type(() => Post)
-  post: Post;
+  post!: Post;
 }

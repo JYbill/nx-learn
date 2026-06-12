@@ -18,9 +18,6 @@
   "files": [],
   "references": [
     {
-      "path": "../../libs/common"
-    },
-    {
       "path": "./tsconfig.lib.json"
     },
     {

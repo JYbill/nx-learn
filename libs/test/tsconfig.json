@@ -5,7 +5,9 @@
     "composite": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "verbatimModuleSyntax": true,
+    "rootDir": "."
   },
   "files": [],
   "references": [

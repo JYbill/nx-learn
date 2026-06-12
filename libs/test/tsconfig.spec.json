@@ -1,11 +1,12 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist",
-    "tsBuildInfoFile": "tsconfig.spec.tsbuildinfo",
+    "tsBuildInfoFile": ".cache/tsconfig.spec.tsbuildinfo",
+    "outDir": "./dist",
     "types": ["jest", "node"]
   },
-  "include": ["src/**/*.test.ts", "src/**/*.spec.ts"],
+  "include": ["src/**/*.test.ts", "src/**/*.spec.ts",
+    "jest.config.ts"
+  ],
   "references": [{ "path": "./tsconfig.lib.json" }]
 }

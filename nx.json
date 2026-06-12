@@ -103,5 +103,6 @@
   "nxCloudEncryptionKey": "fZaxhjNeRyGj0hCCNqMTytc2BeWBtlKD",
   "tui": {
     "enabled": false
-  }
+  },
+  "analytics": false
 }

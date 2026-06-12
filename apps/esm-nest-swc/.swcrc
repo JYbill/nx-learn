@@ -19,5 +19,5 @@
   },
   "sourceMaps": true,
   "minify": false,
-  "exclude": []
+  "exclude": [".*\\.d\\.[cm]?ts$"]
 }

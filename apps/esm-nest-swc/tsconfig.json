@@ -13,13 +13,11 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "types": ["node", "jest"]
   },
   "files": [],
   "references": [
-    {
-      "path": "../../libs/common"
-    },
     {
       "path": "./tsconfig.app.json"
     },
