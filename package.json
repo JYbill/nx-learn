@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "skills:update": "skills add nrwl/nx-ai-agents-config -a claude-code -y",
     "build:esm-nest-jest": "nx run esm-nest-jest:build --batch",
     "serve:esm-nest-jest": "nx run esm-nest-jest:serve",
     "build:esm-nest-swc": "nx run esm-nest-jest:build",
@@ -51,6 +52,7 @@
     "jsonc-eslint-parser": "^3.1.0",
     "nx": "22.7.5",
     "prettier": "^3.8.4",
+    "skills": "^1.5.11",
     "swc-loader": "^0.2.7",
     "ts-jest": "^29.4.11",
     "ts-node": "10.9.2",

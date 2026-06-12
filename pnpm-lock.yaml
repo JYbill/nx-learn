@@ -120,6 +120,9 @@ importers:
       prettier:
         specifier: ^3.8.4
         version: 3.8.4
+      skills:
+        specifier: ^1.5.11
+        version: 1.5.11
       swc-loader:
         specifier: ^0.2.7
         version: 0.2.7(@swc/core@1.15.41(@swc/helpers@0.5.23))(webpack@5.106.2(@swc/core@1.15.41(@swc/helpers@0.5.23)))
@@ -4073,6 +4076,11 @@ packages:
   signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
+
+  skills@1.5.11:
+    resolution: {integrity: sha512-QDGca7EqRpbFQFKESTZm0+rlY8yg4PTAQatvJu+jsTmtDLfApsHdNG+QaKc0MuRhzOH7OW0FdDRcSPTDM+KpNg==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -9275,6 +9283,10 @@ snapshots:
   signal-exit@3.0.7: {}
 
   signal-exit@4.1.0: {}
+
+  skills@1.5.11:
+    dependencies:
+      yaml: 2.9.0
 
   slash@3.0.0: {}
 
