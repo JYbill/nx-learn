@@ -14,7 +14,7 @@
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "types": ["node", "jest"]
+    "types": ["node"]
   },
   "files": [],
   "references": [

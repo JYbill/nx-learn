@@ -8,15 +8,11 @@
       "!{projectRoot}/**/.gitkeep",
       "!{projectRoot}/README.md"
     ],
-    "test": ["default", "ignore"],
     "production": [
       "default",
       "ignore",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
-      "!{projectRoot}/tsconfig.spec.json",
-      "!{projectRoot}/jest.config.[jt]s",
-      "!{projectRoot}/src/test-setup.[jt]s",
-      "!{projectRoot}/test-setup.[jt]s"
+      "!{projectRoot}/tsconfig.spec.json"
     ],
     "sharedGlobals": ["{projectRoot}/*.tsbuildinfo"]
   },
@@ -40,19 +36,10 @@
       }
     },
     {
-      "plugin": "@nx/jest/plugin",
-      "exclude": ["e2e/**/*"],
+      "plugin": "@nx/vitest",
       "options": {
-        "targetName": "test"
-      }
-    },
-    {
-      "plugin": "@nx/jest/plugin",
-      "include": ["e2e/**/*"],
-      "options": {
-        "targetName": "e2e",
-        "ciTargetName": "e2e-ci",
-        "disableJestRuntime": true
+        "testTargetName": "test",
+        "testMode": "run"
       }
     }
   ],
@@ -71,24 +58,12 @@
     "build": {
       "cache": true
     },
-    "test": {
-      "cache": true,
-      "dependsOn": ["^test"],
-      "inputs": [
-        "test",
-        "^production",
-        "{workspaceRoot}/jest.preset.ts",
-        {
-          "externalDependencies": ["jest"]
-        }
-      ]
-    },
-    "e2e": {
-      "cache": true
-    },
     "serve": {
       "continuous": true,
       "cache": false
+    },
+    "test": {
+      "dependsOn": ["^build"]
     }
   },
   "release": {

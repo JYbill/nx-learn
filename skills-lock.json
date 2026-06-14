@@ -42,6 +42,12 @@
       "sourceType": "github",
       "skillPath": "skills/nx-workspace/SKILL.md",
       "computedHash": "32b7b72c54c6644e97ac8c8491e3cfa936afa6f8a86798214258d631367b4add"
+    },
+    "upgrade-project": {
+      "source": "JYbill/xqv-skills",
+      "sourceType": "github",
+      "skillPath": "skills/upgrade-project/SKILL.md",
+      "computedHash": "a4eac4a8af260b8d8eb62c8aed6435c7b5c5b7f479ea8e691b1500e27e839b1e"
     }
   }
 }

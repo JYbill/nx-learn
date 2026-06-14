@@ -7,14 +7,12 @@
     "types": ["node"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-
-    // for swc
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
     "useDefineForClassFields": true
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["jest.config.cts", "src/**/*.spec.ts", "src/**/*.test.ts"],
+  "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"],
   "references": [
     {
       "path": "../../libs/common/tsconfig.lib.json"
