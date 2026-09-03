@@ -72,7 +72,7 @@
 export class CopilotDisplayMessageUtil {
   static buildCopilotDisplayMessages(messages: Message[]) {
     // ...
-    return this.buildDisplayTurn(messages)
+    return this.buildDisplayTurn(messages);
   }
 
   private static buildDisplayTurn(turnMessages: Message[]) {

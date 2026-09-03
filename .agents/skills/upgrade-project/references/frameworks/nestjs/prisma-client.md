@@ -38,8 +38,8 @@ generator client {
 源码从生成目录的公开文件做相对导入，并保留 Node ESM 运行时 `.js` 后缀：
 
 ```ts
-import { PrismaClient, Prisma } from './generate/client.js'
-import type { Prisma as PrismaTypes } from './generate/client.js'
+import { PrismaClient, Prisma } from "./generate/client.js";
+import type { Prisma as PrismaTypes } from "./generate/client.js";
 ```
 
 不要从 `.prisma/client`、`node_modules/.prisma/client` 等私有目录导入。生成目录改变后必须同步所有运行时导入和类型导入。
@@ -49,14 +49,14 @@ import type { Prisma as PrismaTypes } from './generate/client.js'
 私有化项目允许环境目录进入构建阶段时，在执行 `prisma generate` 前复制 `env/`，并由项目脚本显式加载对应环境文件。`prisma.config.ts` 使用 `env()` 严格检查变量，避免真正需要数据库的命令拿到空 URL：
 
 ```ts
-import { defineConfig, env } from 'prisma/config'
+import { defineConfig, env } from "prisma/config";
 
 export default defineConfig({
-  schema: 'prisma/schema.prisma',
+  schema: "prisma/schema.prisma",
   datasource: {
-    url: env('DATABASE_URL'),
+    url: env("DATABASE_URL"),
   },
-})
+});
 ```
 
 ```dockerfile
@@ -77,9 +77,9 @@ const adapter = new PrismaMariaDb({
   user,
   password,
   database,
-})
-const clientOptions = { ...prismaOptions, adapter } satisfies Prisma.PrismaClientOptionsWithAdapter
-const client = new PrismaClient<typeof clientOptions>(clientOptions)
+});
+const clientOptions = { ...prismaOptions, adapter } satisfies Prisma.PrismaClientOptionsWithAdapter;
+const client = new PrismaClient<typeof clientOptions>(clientOptions);
 ```
 
 其他 adapter 先核对其真实构造参数，不把 MariaDB 的配置方式机械套用过去。

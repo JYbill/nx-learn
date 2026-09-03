@@ -3,13 +3,5 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/common/src",
   "projectType": "library",
-  "tags": [],
-  "targets": {
-    "lint": {
-      "outputs": ["{options.outputFile}", "{projectRoot}/.cache/.eslintcache"],
-      "options": {
-        "args": "--cache --cache-location .cache/.eslintcache --concurrency auto"
-      }
-    }
-  }
+  "tags": []
 }

@@ -2,12 +2,7 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
-    "ignore": [
-      "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/eslint.config.mjs",
-      "!{projectRoot}/**/.gitkeep",
-      "!{projectRoot}/README.md"
-    ],
+    "ignore": ["!{projectRoot}/**/.gitkeep", "!{projectRoot}/README.md"],
     "production": [
       "default",
       "ignore",
@@ -30,7 +25,7 @@
       }
     },
     {
-      "plugin": "@nx/eslint/plugin",
+      "plugin": "@nx/oxlint",
       "options": {
         "targetName": "lint"
       }
@@ -44,17 +39,6 @@
     }
   ],
   "targetDefaults": {
-    "lint": {
-      "cache": true,
-      "inputs": [
-        "default",
-        "{workspaceRoot}/eslint.config.mjs",
-        "{projectRoot}/eslint.config.mjs",
-        {
-          "externalDependencies": ["eslint"]
-        }
-      ]
-    },
     "build": {
       "cache": true,
       "dependsOn": ["^build"]

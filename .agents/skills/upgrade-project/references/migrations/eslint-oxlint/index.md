@@ -186,11 +186,8 @@
    - 如果项目同时使用 Oxfmt 和 Oxlint，`lint-staged.config.js` 默认模板为：
      ```js
      export default {
-       '*.ts': [
-         'oxfmt --write',
-         'oxlint --config oxlint.config.ts --fix --no-error-on-unmatched-pattern',
-       ],
-     }
+       "*.ts": ["oxfmt --write", "oxlint --config oxlint.config.ts --fix --no-error-on-unmatched-pattern"],
+     };
      ```
    - `--no-error-on-unmatched-pattern` 用于允许暂存文件经过 `ignorePatterns` 过滤后没有可 lint 文件，例如只提交 `.d.ts`。
    - 如果 lint-staged 调用 `pnpm lint`，确认迁移后仍符合预期。
@@ -239,7 +236,7 @@
 const query = {
   ...dtoInstance,
   vector,
-}
+};
 ```
 
 应改为显式构造普通对象：
@@ -249,7 +246,7 @@ const query = {
   curriculumId: dtoInstance.curriculumId,
   courseId: dtoInstance.courseId,
   vector,
-}
+};
 ```
 
 这样比关闭规则更好，因为它表达了真实数据结构，也避免 class 实例原型被悄悄丢弃。

@@ -5,12 +5,6 @@
   "projectType": "application",
   "tags": [],
   "targets": {
-    "lint": {
-      "outputs": ["{options.outputFile}", "{projectRoot}/.cache/.eslintcache"],
-      "options": {
-        "args": "--cache --cache-location .cache/.eslintcache --concurrency auto"
-      }
-    },
     "build": {
       "executor": "nx:run-commands",
       "options": {

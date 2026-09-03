@@ -3,21 +3,21 @@
   "jsc": {
     "target": "esnext",
     "baseUrl": ".",
+    "externalHelpers": true,
     "parser": {
       "syntax": "typescript",
-      "decorators": true,
-      "dynamicImport": true
+      "decorators": true
     },
     "transform": {
       "decoratorMetadata": true,
       "legacyDecorator": true
     },
     "keepClassNames": true,
-    "externalHelpers": true,
     "loose": false
   },
   "module": {
-    "type": "nodenext"
+    "type": "nodenext",
+    "ignoreDynamic": true
   },
   "sourceMaps": true,
   "minify": false,

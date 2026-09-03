@@ -1,16 +1,16 @@
 # 运行环境与工具链
 
 - 当前开发环境使用 Node.js 26 和 pnpm 11；依赖安装与锁文件更新统一使用 pnpm，不新增其他包管理器的锁文件。
-- 工作区使用 Nx 22、NestJS 11、TypeScript 6 和 NodeNext ESM。
+- 工作区使用 Nx 22、NestJS 12、TypeScript 6 和 NodeNext ESM。
 - `esm-nest-swc` 通过 Nest CLI 和 SWC 构建，构建目标同时执行 TypeScript 类型检查，产物入口为 `apps/esm-nest-swc/dist/main.js`。
-- 代码质量工具为 ESLint、Prettier 和 Vitest；Nx 目标是项目级检查的统一入口。
+- 代码质量工具为 Oxlint、Oxfmt 和 Vitest；Nx 目标是项目级检查的统一入口。
 
 # 常用命令
 
 ```bash
 # 编辑代码后，优先只检查和格式化本次修改的文件。
-pnpm exec eslint path/to/file.ts --fix
-pnpm exec prettier --write "path/to/file.ts"
+pnpm exec oxlint --fix path/to/file.ts
+pnpm exec oxfmt --write "path/to/file.ts"
 
 # 应用级类型检查、构建与测试。
 pnpm exec nx run esm-nest-swc:typecheck
@@ -37,7 +37,7 @@ pnpm check-nx-task
 
 本仓库使用 NodeNext ESM 包导出，而不是 TypeScript `paths`。`tsconfig.base.json` 将 `moduleResolution` 和 `module` 设为 `nodeNext`，并启用 `@nx-learn/source` 自定义条件。内部库的 `package.json` 会把 `@nx-learn/source` 指向 `./src/index.ts`，普通导入指向 `./dist/index.js`。相对 TypeScript 导入保持显式 `.js` 后缀。
 
-Nx 目标主要由 `nx.json` 中配置的插件推断，包括 `@nx/js/typescript`、`@nx/eslint/plugin` 和 `@nx/vitest`，项目级覆盖写在各自的 `project.json` 中。`esm-nest-swc` 在 `project.json` 中覆盖 `build`，先通过 `nest build` 使用 SWC 构建，再执行 `esm-nest-swc:typecheck`。`test` 目标由 `@nx/vitest` 根据 `apps/esm-nest-swc/vitest.config.ts` 隐式推断，coverage 目录以 `vitest.config.ts` 为准。根脚本 `check-nx-task` 只运行 `typecheck build lint`。
+Nx 目标主要由 `nx.json` 中配置的插件推断，包括 `@nx/js/typescript`、`@nx/oxlint` 和 `@nx/vitest`。`esm-nest-swc` 在 `project.json` 中覆盖 `build`，先通过 `nest build` 使用 SWC 构建，再执行 `esm-nest-swc:typecheck`。`lint` 目标由 `@nx/oxlint` 根据根目录的 `oxlint.config.ts` 隐式推断；`test` 目标由 `@nx/vitest` 根据 `apps/esm-nest-swc/vitest.config.ts` 隐式推断，coverage 目录以 `vitest.config.ts` 为准。根脚本 `check-nx-task` 只运行 `typecheck build lint`。
 
 Agent skill 位于 `.agents/skills`。根脚本 `skills:update` 会安装 `nrwl/nx-ai-agents-config` 和 `upgrade-project` skill，`skills-lock.json` 记录 skill 版本；这些文件影响 Agent 行为，不影响应用构建产物。
 

@@ -2,11 +2,9 @@ packages:
   - libs/**
   - apps/**
 
-minimumReleaseAge: 720
-
 allowBuilds:
-  '@nestjs/core': true
-  '@swc/core': true
+  "@nestjs/core": true
+  "@swc/core": true
   nx: true
   unrs-resolver: true
 
