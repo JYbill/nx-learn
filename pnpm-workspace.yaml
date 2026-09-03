@@ -2,6 +2,8 @@ packages:
   - libs/**
   - apps/**
 
+minimumReleaseAge: 720
+
 allowBuilds:
   '@nestjs/core': true
   '@swc/core': true

@@ -16,7 +16,7 @@
     ],
     "sharedGlobals": ["{projectRoot}/*.tsbuildinfo"]
   },
-  "useInferencePlugins": false,
+  "useInferencePlugins": true,
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
@@ -56,13 +56,15 @@
       ]
     },
     "build": {
-      "cache": true
+      "cache": true,
+      "dependsOn": ["^build"]
     },
     "serve": {
-      "continuous": true,
-      "cache": false
+      "cache": false,
+      "continuous": true
     },
     "test": {
+      "cache": true,
       "dependsOn": ["^build"]
     }
   },
@@ -77,5 +79,9 @@
   "tui": {
     "enabled": false
   },
-  "analytics": false
+  "analytics": false,
+  "neverConnectToCloud": true,
+  "migrate": {
+    "agentic": false
+  }
 }
