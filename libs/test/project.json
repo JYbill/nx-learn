@@ -3,5 +3,13 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/test/src",
   "projectType": "library",
-  "tags": []
+  "tags": [],
+  "targets": {
+    "format": {
+      "command": "oxfmt --write .",
+      "options": {
+        "cwd": "{projectRoot}"
+      }
+    }
+  }
 }

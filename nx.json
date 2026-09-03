@@ -43,6 +43,11 @@
       "cache": true,
       "dependsOn": ["^build"]
     },
+    "format": {
+      "cache": true,
+      "inputs": ["default"],
+      "outputs": []
+    },
     "serve": {
       "cache": false,
       "continuous": true

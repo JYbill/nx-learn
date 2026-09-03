@@ -18,6 +18,12 @@
         "cwd": "apps/esm-nest-swc",
         "commands": ["nest start --watch --type-check"]
       }
+    },
+    "format": {
+      "command": "oxfmt --write .",
+      "options": {
+        "cwd": "{projectRoot}"
+      }
     }
   }
 }
