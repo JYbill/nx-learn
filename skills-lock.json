@@ -11,7 +11,7 @@
       "source": "nrwl/nx-ai-agents-config",
       "sourceType": "github",
       "skillPath": "skills/monitor-ci/SKILL.md",
-      "computedHash": "e549eacd3b7175f16cfb933a817481b99b7effc6f10c93de3c98cb8cf082c4ce"
+      "computedHash": "edb5f75c3bab6377cdc8d82003ed01d82d58b5401ce9c8052109d83e6fb8f0ee"
     },
     "nx-generate": {
       "source": "nrwl/nx-ai-agents-config",
@@ -47,7 +47,7 @@
       "source": "JYbill/xqv-skills",
       "sourceType": "github",
       "skillPath": "skills/upgrade-project/SKILL.md",
-      "computedHash": "a4eac4a8af260b8d8eb62c8aed6435c7b5c5b7f479ea8e691b1500e27e839b1e"
+      "computedHash": "c597ac07a2c42d7d4c058191d4a1fbefd1451ac4f11bef08dcf6761b2b05ce7d"
     }
   }
 }

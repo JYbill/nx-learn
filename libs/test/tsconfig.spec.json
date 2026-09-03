@@ -1,9 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "rootDir": "src",
     "outDir": "./out-tsc",
-    "types": ["node"],
     "tsBuildInfoFile": ".cache/tsconfig.spec.tsbuildinfo"
   },
   "include": ["src/**/*.test.ts", "src/**/*.spec.ts"],

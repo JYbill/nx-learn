@@ -1,13 +1,14 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "rootDir": "src",
     "incremental": true,
     "composite": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "declarationMap": true,
     "verbatimModuleSyntax": true,
-    "rootDir": "."
+    "types": ["node"]
   },
   "files": [],
   "references": [
